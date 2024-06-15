@@ -1,6 +1,6 @@
 package year20.day2
 
-import year20.readLines
+import util.readLines
 
 class Parsed(line: String) {
     private val groups: List<String> =

@@ -1,6 +1,6 @@
 package year20.day5
 
-import year20.readLines
+import util.readLines
 
 fun main() {
     val lines = readLines()
