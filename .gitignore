@@ -6,6 +6,12 @@ out/
 /.idea
 /*.iml
 
+.gradle
+build/
+!**/src/main/**/build/
+
+.java-version
+
 ### Eclipse ###
 .apt_generated
 .classpath

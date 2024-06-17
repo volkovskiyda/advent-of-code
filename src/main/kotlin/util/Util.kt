@@ -15,7 +15,8 @@ fun readLines(fileName: FileName): List<String> {
     return readLines(year, day, fileName.name)
 }
 
-fun readLines(year: String, day: String, fileName: String) = readLines(FilePath("src/$year/$day/$fileName.txt"))
+fun readLines(year: String, day: String, fileName: String) =
+    readLines(FilePath("src/main/kotlin/$year/$day/$fileName.txt"))
 
 fun readLines(filePath: FilePath): List<String> = File(filePath.path).readLines()
 
