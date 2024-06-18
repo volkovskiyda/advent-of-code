@@ -11,7 +11,9 @@ value class FilePath(val path: String)
 fun readLines(sampleData: Boolean = false): List<String> = readLines(FileName(if (sampleData) "sample" else "input"))
 
 fun readLines(fileName: FileName): List<String> {
-    val (year, day) = packages()
+    val packages = packages()
+    println(packages)
+    val (year, day) = packages
     return readLines(year, day, fileName.name)
 }
 
