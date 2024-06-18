@@ -44,6 +44,16 @@ private fun part2(values: List<Int>): Long {
     return repeats.map { requireNotNull(possibilities[it]) }.fold(1) { acc, i -> acc * i }
 }
 
+private fun part2_tginsberg(values: List<Int>): Long {
+    val pathsByAdapter = mutableMapOf(0 to 1L)
+    values.drop(1).forEach { adapter ->
+        pathsByAdapter[adapter] = (1..3).sumOf { lockBack ->
+            pathsByAdapter.getOrDefault(adapter - lockBack, 0)
+        }
+    }
+    return pathsByAdapter.getValue(values.last())
+}
+
 /**
  * https://en.wikipedia.org/wiki/Combination#Number_of_k-combinations_for_all_k
  * Possible variants for 3 digit sequence = 2
