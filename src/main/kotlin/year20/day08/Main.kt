@@ -1,4 +1,4 @@
-package year20.day8
+package year20.day08
 
 import util.readLines
 
